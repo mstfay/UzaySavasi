@@ -8,7 +8,7 @@ public class Learning : MonoBehaviour
     void Start()
     {
         int x = 6;
-
+        //ek yorum satırı
         //if (20<x && x<=30)
         //{
         //    Debug.Log("Ebenin Amı!");
