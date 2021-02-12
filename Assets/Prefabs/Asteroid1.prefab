@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5628030529956223878}
   - component: {fileID: 8472083825530467589}
   - component: {fileID: -332449349522934429}
-  - component: {fileID: -5768569443714691372}
   - component: {fileID: 7216257439233362671}
   m_Layer: 8
   m_Name: Asteroid1
@@ -132,19 +131,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-5768569443714691372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7870353138519145189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c387f47d63e9ae4f8e322efb170fcf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patlamaPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
 --- !u!114 &7216257439233362671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000132dbe3a41214cb54d48e6c64ce5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}

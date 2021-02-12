@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameControl : MonoBehaviour
 {
+
     [SerializeField]
     GameObject shipPrefab;
 
@@ -36,7 +37,7 @@ public class GameControl : MonoBehaviour
         {
             position.z = -Camera.main.transform.position.z;
             position = Camera.main.ScreenToWorldPoint(position);
-            position.x = Random.Range(EkranHesaplayicisi.Sol + 0.35f, EkranHesaplayicisi.Sag - 0.35f);
+            position.x = Random.Range(EkranHesaplayicisi.Sol + 0.4f, EkranHesaplayicisi.Sag - 0.4f);
             position.y = EkranHesaplayicisi.Ust - 1;
 
             GameObject asteroid = Instantiate(asteroidPrefabs[Random.Range(0, 3)], position, Quaternion.identity);

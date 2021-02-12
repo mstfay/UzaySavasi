@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ShipControl : MonoBehaviour
 {
+    [SerializeField]
+    GameObject bulletPrefab;
+
     const float movementPower = 10;
 
     // Start is called before the first frame update
@@ -28,5 +31,12 @@ public class ShipControl : MonoBehaviour
             position.y += verticalInput * movementPower * Time.deltaTime;
         }
         transform.position = position;
+
+        if(Input.GetButtonDown("Jump"))
+        {
+            Vector3 bulletPosition = gameObject.transform.position;
+            bulletPosition.y += 1;
+            Instantiate(bulletPrefab, bulletPosition, Quaternion.identity);
+        }
     }
 }

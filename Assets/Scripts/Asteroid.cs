@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
+    [SerializeField]
+    GameObject explosionPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +24,12 @@ public class Asteroid : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 }

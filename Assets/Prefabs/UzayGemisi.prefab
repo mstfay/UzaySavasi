@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6598304213958727502}
   - component: {fileID: 6598304213958727498}
   - component: {fileID: 869831177472749747}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UzayGemisi
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -143,3 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81fd63512f078846916a1f4ac491f53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7505738442608008072, guid: ce696f2ac92077147a636ab4482741a5,
+    type: 3}

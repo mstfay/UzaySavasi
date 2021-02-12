@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2493473773015656874
+--- !u!1 &7505738442608008072
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2493473773015656865}
-  - component: {fileID: 2493473773015656878}
-  - component: {fileID: 2493473773015656879}
-  - component: {fileID: 2493473773015656876}
-  - component: {fileID: 4514068444967834019}
-  m_Layer: 8
-  m_Name: Asteroid3
-  m_TagString: Untagged
+  - component: {fileID: 8168384828560561842}
+  - component: {fileID: 1940048094435643192}
+  - component: {fileID: 2450686244910562195}
+  - component: {fileID: 3619251705630754928}
+  - component: {fileID: 2407731293911617996}
+  m_Layer: 9
+  m_Name: Kursun
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2493473773015656865
+--- !u!4 &8168384828560561842
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2493473773015656874}
+  m_GameObject: {fileID: 7505738442608008072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5548491, y: -0.30150422, z: 0}
+  m_LocalPosition: {x: -6.5025907, y: -1.4714358, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2493473773015656878
+--- !u!212 &1940048094435643192
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2493473773015656874}
+  m_GameObject: {fileID: 7505738442608008072}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 265f59dcf6918d442abbbd288872ae1c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b35a31e97c35d184eb009073349ba368, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,14 +84,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &2493473773015656879
+--- !u!50 &2450686244910562195
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2493473773015656874}
+  m_GameObject: {fileID: 7505738442608008072}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -105,42 +105,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &2493473773015656876
-BoxCollider2D:
+--- !u!58 &3619251705630754928
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2493473773015656874}
+  m_GameObject: {fileID: 7505738442608008072}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0033490658, y: -0.008372545}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.5194349, y: 0.5964626}
-  m_EdgeRadius: 0
---- !u!114 &4514068444967834019
+  m_Radius: 0.32
+--- !u!114 &2407731293911617996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2493473773015656874}
+  m_GameObject: {fileID: 7505738442608008072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 000132dbe3a41214cb54d48e6c64ce5a, type: 3}
+  m_Script: {fileID: 11500000, guid: f7f3b5d9c92d08b4294949ae8969d0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
