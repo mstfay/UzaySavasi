@@ -7,7 +7,10 @@ public class ShipControl : MonoBehaviour
     [SerializeField]
     GameObject bulletPrefab;
 
-    const float movementPower = 10;
+    [SerializeField]
+    GameObject explosionPrefab;
+
+    const float movementPower = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +35,20 @@ public class ShipControl : MonoBehaviour
         }
         transform.position = position;
 
-        if(Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
         {
             Vector3 bulletPosition = gameObject.transform.position;
             bulletPosition.y += 1;
             Instantiate(bulletPrefab, bulletPosition, Quaternion.identity);
         }
     }
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            if(collision.gameObject.tag == "Asteroid")
+            {
+                Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
+    
 }

@@ -169,8 +169,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 12.8, y: 5}
-  - {x: 12.8, y: -5}
+  - {x: 13.4, y: 5}
+  - {x: 13.4, y: -5}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -244,8 +244,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -12.8, y: -5}
-  - {x: 12.8, y: -5}
+  - {x: -13.4, y: -5}
+  - {x: 13.4, y: -5}
 --- !u!68 &519420034
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -262,8 +262,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -12.8, y: 5}
-  - {x: -12.8, y: -5}
+  - {x: -13.4, y: 5}
+  - {x: -13.4, y: -5}
 --- !u!68 &519420035
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -280,8 +280,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -12.8, y: 5}
-  - {x: 12.8, y: 5}
+  - {x: -13.4, y: 5}
+  - {x: 13.4, y: 5}
 --- !u!114 &519420036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,3 +312,5 @@ MonoBehaviour:
   - {fileID: 7870353138519145189, guid: 4486c697eeb399b45901adc7707c9f1d, type: 3}
   - {fileID: 1252558483495818638, guid: b102d1e493434084f84a953eceda6d97, type: 3}
   - {fileID: 2493473773015656874, guid: 159d3910688c06c44b3fd3e91e047e2b, type: 3}
+  difficulty: 4
+  factor: 5

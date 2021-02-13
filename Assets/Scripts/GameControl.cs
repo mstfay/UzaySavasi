@@ -15,6 +15,12 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     List<GameObject> asteroidPrefabs = new List<GameObject>();
 
+    [SerializeField]
+    int difficulty = 1;
+
+    [SerializeField]
+    int factor = 5;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +48,16 @@ public class GameControl : MonoBehaviour
 
             GameObject asteroid = Instantiate(asteroidPrefabs[Random.Range(0, 3)], position, Quaternion.identity);
             asteroidList.Add(asteroid);
+        }
+    }
+
+    public void AsteroidDisappear(GameObject asteroid)
+    {
+        asteroidList.Remove(asteroid);
+        if (asteroidList.Count <= difficulty)
+        {
+            difficulty++;
+            AsteroidUret(difficulty * factor);
         }
     }
 }
