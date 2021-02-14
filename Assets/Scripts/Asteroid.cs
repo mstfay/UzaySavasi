@@ -35,18 +35,23 @@ public class Asteroid : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             gameControl.AsteroidDisappear(gameObject);
-            Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            AsteroidYokEt();
         }
 
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    public void AsteroidYokEt()
     {
-        if (col.gameObject.tag == "Player")
-        {
-            Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
+        Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
+
+    //void OnCollisionEnter2D(Collision2D col)
+    //{
+    //    if (col.gameObject.tag == "Player")
+    //    {
+    //        Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

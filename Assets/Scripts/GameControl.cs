@@ -21,9 +21,18 @@ public class GameControl : MonoBehaviour
     [SerializeField]
     int factor = 5;
 
+    UIControl uiControl;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        uiControl = GetComponent<UIControl>();
+    }
+
+    public void StartGame()
+    {
+        uiControl.GameStarted();
         ship = Instantiate(shipPrefab);
         ship.transform.position = new Vector3(0, EkranHesaplayicisi.Alt + 1.5f);
         AsteroidUret(5);
@@ -53,11 +62,23 @@ public class GameControl : MonoBehaviour
 
     public void AsteroidDisappear(GameObject asteroid)
     {
+        uiControl.AsteroidDestroyed(asteroid);
         asteroidList.Remove(asteroid);
         if (asteroidList.Count <= difficulty)
         {
             difficulty++;
             AsteroidUret(difficulty * factor);
         }
+    }
+
+    public void GameOver()
+    {
+        foreach (GameObject asteroid in asteroidList)
+        {
+            asteroid.GetComponent<Asteroid>().AsteroidYokEt();
+        }
+        asteroidList.Clear();
+        difficulty = 1;
+        uiControl.EndGame();
     }
 }

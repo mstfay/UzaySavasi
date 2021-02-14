@@ -10,12 +10,14 @@ public class ShipControl : MonoBehaviour
     [SerializeField]
     GameObject explosionPrefab;
 
+    GameControl gameControl;
+
     const float movementPower = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameControl = Camera.main.GetComponent<GameControl>();
     }
 
     // Update is called once per frame
@@ -46,6 +48,7 @@ public class ShipControl : MonoBehaviour
         {
             if(collision.gameObject.tag == "Asteroid")
             {
+                gameControl.GameOver();
                 Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
