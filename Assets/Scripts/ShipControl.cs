@@ -39,6 +39,7 @@ public class ShipControl : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioControl>().Fire();
             Vector3 bulletPosition = gameObject.transform.position;
             bulletPosition.y += 1;
             Instantiate(bulletPrefab, bulletPosition, Quaternion.identity);
@@ -48,6 +49,7 @@ public class ShipControl : MonoBehaviour
         {
             if(collision.gameObject.tag == "Asteroid")
             {
+                GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioControl>().ShipExplosion();
                 gameControl.GameOver();
                 Instantiate(explosionPrefab, gameObject.transform.position, Quaternion.identity);
                 Destroy(gameObject);

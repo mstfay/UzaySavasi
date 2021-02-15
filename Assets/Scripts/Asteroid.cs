@@ -34,6 +34,7 @@ public class Asteroid : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioControl>().AsteroidExplosion();
             gameControl.AsteroidDisappear(gameObject);
             AsteroidYokEt();
         }
